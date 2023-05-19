@@ -213,7 +213,7 @@ class _UserProfilesState extends State<UserProfiles> {
   GridView portraitTabGrid() {
     return GridView.builder(
         gridDelegate:
-            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
         itemCount: profiles.length,
         itemBuilder: (BuildContext ctx, index) {
           return Padding(
@@ -285,6 +285,7 @@ class _UserProfilesState extends State<UserProfiles> {
   ListView landscapeList() {
     return ListView.builder(
       itemCount: profiles.length,
+      
       itemBuilder: ((context, index) {
         return ListTile(
           leading: Image.network(profiles[index].avatar),
